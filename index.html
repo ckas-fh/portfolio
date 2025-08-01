@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caroline Kasman - Program Strategist & Builder</title>
+    <title>Caroline Kasman | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='white'/><rect x='4' y='4' width='24' height='24' fill='%238B0000'/></svg>">
     <style>
         * {
             margin: 0;
@@ -332,7 +333,7 @@
                 <a href="https://linkedin.com/in/carolinekasman" target="_blank">LinkedIn</a>
                 <a href="https://github.com/ckas-fh" target="_blank">GitHub</a>
                 <a href="mailto:carolinekasman@gmail.com">Email</a>
-                <a href="/resume.pdf" target="_blank">Resume</a>
+                <a href="#" onclick="showResumeMessage(event)">Resume</a>
             </div>
         </header>
 
@@ -515,5 +516,12 @@
             <p>© 2025 Caroline Kasman. Built with AI assistance.</p>
         </footer>
     </div>
+
+    <script>
+        function showResumeMessage(event) {
+            event.preventDefault();
+            alert("Multiple versions available - please email for role-specific resume\n\nI tailor my resume for climate, health, tech, and other sectors. Email me at carolinekasman@gmail.com to discuss your role and I'll send the most relevant version!");
+        }
+    </script>
 </body>
 </html>
