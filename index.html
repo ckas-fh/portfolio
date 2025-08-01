@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroline Kasman - Program Strategist & Builder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #8B0000;
+            background: #ffffff;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Grid background pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(139, 0, 0, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139, 0, 0, 0.1) 1px, transparent 1px);
+            background-size: 25px 25px;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            padding: 80px 20px 60px;
+            text-align: left;
+        }
+
+        .intro-text {
+            font-size: 0.9em;
+            color: #8B0000;
+            margin-bottom: 10px;
+            opacity: 0.7;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -3px;
+            color: #8B0000;
+            font-family: Arial Black, sans-serif;
+            text-transform: lowercase;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            color: #8B0000;
+            margin-bottom: 30px;
+            max-width: 600px;
+            line-height: 1.5;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .links {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: #8B0000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #8B0000;
+            transition: width 0.3s;
+        }
+
+        .links a:hover::after {
+            width: 100%;
+        }
+
+        .content-grid {
+            margin-top: 80px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            color: #8B0000;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-transform: lowercase;
+            font-family: Arial Black, sans-serif;
+        }
+
+        .project {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(139, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .project:hover {
+            border-color: #8B0000;
+            transform: translateX(10px);
+        }
+
+        .project.faded {
+            opacity: 0.6;
+            border-style: dashed;
+        }
+
+        .project.faded:hover {
+            opacity: 0.8;
+        }
+
+        .project h3 {
+            color: #8B0000;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+            font-weight: 700;
+        }
+
+        .project-type {
+            display: inline-block;
+            color: #8B0000;
+            padding: 4px 0;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.6;
+            font-weight: 500;
+        }
+
+        .project p {
+            color: #8B0000;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .coming-soon {
+            font-style: italic;
+            opacity: 0.6;
+            margin-top: 10px;
+            text-transform: lowercase;
+        }
+
+        .tech-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tech-pill {
+            background: transparent;
+            color: #8B0000;
+            padding: 4px 12px;
+            border: 1px solid #8B0000;
+            font-size: 0.85em;
+            transition: all 0.3s;
+        }
+
+        .tech-pill:hover {
+            background: #8B0000;
+            color: white;
+        }
+
+        .project-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .project-links a {
+            color: #8B0000;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 1px;
+        }
+
+        .project-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #8B0000;
+            transition: width 0.3s;
+        }
+
+        .project-links a:hover::after {
+            width: 100%;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .skill-category h4 {
+            color: #8B0000;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: transparent;
+            padding: 8px 16px;
+            border: 1px solid #8B0000;
+            font-size: 0.9em;
+            color: #8B0000;
+            transition: all 0.3s;
+        }
+
+        .skill:hover {
+            background: #8B0000;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .about-content {
+            font-size: 1.1em;
+            color: #8B0000;
+            line-height: 1.8;
+            opacity: 0.85;
+        }
+
+        .about-content strong {
+            color: #8B0000;
+            font-weight: 700;
+            opacity: 1;
+        }
+
+        .art-note {
+            margin-top: 30px;
+            padding: 20px;
+            border-left: 3px solid #8B0000;
+            font-size: 0.95em;
+            color: #8B0000;
+            opacity: 0.8;
+            background: rgba(139, 0, 0, 0.03);
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #8B0000;
+            font-size: 0.9em;
+            opacity: 0.6;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+
+            .project {
+                padding: 20px;
+            }
+
+            .links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p class="intro-text">hi! i'm</p>
+            <h1>caroline kasman</h1>
+            <p class="tagline">
+                Program and product strategist who builds things. Currently exploring the intersection of 
+                AI, systems innovation, and human-centered design.
+            </p>
+            <div class="links">
+                <a href="https://linkedin.com/in/carolinekasman" target="_blank">LinkedIn</a>
+                <a href="https://github.com/ckas-fh" target="_blank">GitHub</a>
+                <a href="mailto:your.email@example.com">Email</a>
+                <a href="/resume.pdf" target="_blank">Resume</a>
+            </div>
+        </header>
+
+        <div class="content-grid">
+            <!-- Projects Section -->
+            <section class="section">
+                <h2>projects</h2>
+                
+                <div class="project">
+                    <span class="project-type">AI + Product Development</span>
+                    <h3>User Feedback Analyzer</h3>
+                    <p>Built an AI-powered tool that transforms customer feedback into actionable insights. 
+                    Learned full-stack development through "vibe coding" - using AI to help build a real product 
+                    that solves business problems.</p>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">Claude AI</span>
+                        <span class="tech-pill">Cursor</span>
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">Product Design</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ckas-fh/user-feedback-analyzer" target="_blank">View Code</a>
+                        <a href="https://user-feedback-analyzer-production.up.railway.app" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project faded">
+                    <span class="project-type">Health Innovation</span>
+                    <h3>Precision Medicine Program Strategy</h3>
+                    <p>Developed scalable framework for translating genomic research into clinical applications. 
+                    Aligned stakeholders across research, clinical, and technology teams to accelerate 
+                    implementation.</p>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Program Management</span>
+                        <span class="tech-pill">Stakeholder Alignment</span>
+                        <span class="tech-pill">Health Tech</span>
+                    </div>
+                    <p class="coming-soon">detailed case study coming soon</p>
+                </div>
+
+                <div class="project faded">
+                    <span class="project-type">Climate + Health</span>
+                    <h3>One Health Data Integration</h3>
+                    <p>Designed data pipeline connecting environmental sensors with population health metrics 
+                    to identify climate-related health risks. Presented findings on AI applications in 
+                    climate resilience.</p>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">Data Strategy</span>
+                        <span class="tech-pill">Systems Thinking</span>
+                    </div>
+                    <p class="coming-soon">full project documentation coming soon</p>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="section">
+                <h2>skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Strategy & Management</h4>
+                        <div class="skill-list">
+                            <span class="skill">Program Strategy</span>
+                            <span class="skill">Product Roadmapping</span>
+                            <span class="skill">Project Management</span>
+                            <span class="skill">GTM Strategy</span>
+                            <span class="skill">Agile/Scrum</span>
+                            <span class="skill">Risk Mitigation</span>
+                            <span class="skill">Stakeholder Alignment</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Technical & Data</h4>
+                        <div class="skill-list">
+                            <span class="skill">Python</span>
+                            <span class="skill">SQL</span>
+                            <span class="skill">R</span>
+                            <span class="skill">Snowflake</span>
+                            <span class="skill">dbt</span>
+                            <span class="skill">Databricks</span>
+                            <span class="skill">Azure ML</span>
+                            <span class="skill">AWS</span>
+                            <span class="skill">Tableau</span>
+                            <span class="skill">Power BI</span>
+                            <span class="skill">Hex</span>
+                            <span class="skill">Evidence</span>
+                            <span class="skill">Jupyter</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Domain & Innovation</h4>
+                        <div class="skill-list">
+                            <span class="skill">Precision Medicine</span>
+                            <span class="skill">Genomics/NGS</span>
+                            <span class="skill">Neurologic Disorders</span>
+                            <span class="skill">Climate Tech</span>
+                            <span class="skill">Population Health</span>
+                            <span class="skill">EHR Integration</span>
+                            <span class="skill">Regulatory Alignment</span>
+                            <span class="skill">Scientific Communication</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>AI & Product Development</h4>
+                        <div class="skill-list">
+                            <span class="skill">AI-Powered Development</span>
+                            <span class="skill">Claude/ChatGPT/Gemini/Manus</span>
+                            <span class="skill">Cursor AI</span>
+                            <span class="skill">Claude Code</span>
+                            <span class="skill">Product Design</span>
+                            <span class="skill">Rapid Prototyping</span>
+                            <span class="skill">Cross-Functional Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Community Impact Section -->
+            <section class="section">
+                <h2>community impact</h2>
+                
+                <div class="project">
+                    <span class="project-type">Healthcare Access</span>
+                    <h3>Medical Assistant Volunteer - Clinic by the Bay</h3>
+                    <p>Supporting patient intake, EHR navigation, and care delivery in free clinic serving underserved San Francisco communities. Working directly with patients to improve healthcare access and outcomes.</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">Mar 2024 – Present</p>
+                </div>
+
+                <div class="project">
+                    <span class="project-type">Emergency Medicine</span>
+                    <h3>Emergency Medical Volunteer - UCSF Orthosurgery</h3>
+                    <p>Providing emergency medical support at major San Francisco races including Bay to Breakers and SF Marathon. Certified NREMT with wilderness medicine training, combining clinical skills with field response.</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">May 2024 – Present</p>
+                </div>
+
+                <div class="project">
+                    <span class="project-type">Nonprofit Leadership</span>
+                    <h3>Board Director - The Center for Chronic Illness</h3>
+                    <p>Doubled nonprofit's support group reach for chronic illness patients across under-resourced communities. Led strategic initiatives to expand access and improve program effectiveness.</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">Jun 2019 – Apr 2024 | Seattle, WA</p>
+                </div>
+
+                <div class="project">
+                    <span class="project-type">Climate Innovation</span>
+                    <h3>Community Volunteer - 9zero Climate Tech Hub</h3>
+                    <p>Organizing and managing climate tech networking events, fostering collaboration between founders, investors, and engineers in San Francisco's climate innovation ecosystem.</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">2024 – Present</p>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="section">
+                <h2>about</h2>
+                <div class="about-content">
+                    <p>
+                        I'm a program and product strategist with a scientist's curiosity and a builder's mindset. 
+                        My background spans <strong>biomedical research</strong>, <strong>population health innovation</strong>, 
+                        <strong>climate tech</strong>, and <strong>emerging technologies</strong> - but what drives me is making complex systems work better for people.
+                    </p>
+                    <p style="margin-top: 20px;">
+                        Currently exploring how AI can amplify human problem-solving, whether that's in precision medicine, 
+                        climate resilience, or anywhere else innovation is needed. Learning to code and product design has opened up 
+                        new ways to prototype solutions and bridge the gap between strategy and implementation.
+                    </p>
+                    <p style="margin-top: 20px;">
+                        <strong>What I bring:</strong> Systems thinking shaped by early work in macroeconomics research, scientific rigor, 
+                        and the ability to translate between technical teams and stakeholders. Plus, a growing toolkit for building things myself.
+                    </p>
+                    
+                    <div class="art-note">
+                        <strong>Plot twist:</strong> I also make art. Working on a separate creative portfolio, 
+                        but happy to share if you're curious about the right-brain side of things.
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>© 2025 Caroline Kasman. Built with AI assistance.</p>
+        </footer>
+    </div>
+</body>
+</html>
