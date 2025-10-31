@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroline Kasman | Portfolio</title>
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAdgAAAHYBTnsmCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFESURBVFiFtZe9SwJRFMWfL1sIFxsaGhpacGhpaGhoaGhpaWlpaWlpaWhoaGhpaGlpaGhpaWlpaGhpaGlpaWlpaWlpaWlpaGhpaGhpaGlpaWnJoaGhJYeGFhwaGlpycGhpycGhpaUlB4eWlpYcHFpaWnJwaGlpycGhpaUlB4eWlpYcHFpaWnJwaGlpycGhpaUlB4eWlpYcHFpaWnJwaGlpycGhpaUlh4aWlpYcGlpaWnJoaGlpyaGhpaUlh4aWlpYcGlpaWnJoaGlpyaGhpaUlh4aWlpYcGlpaWnJoaGlpyaGhpaUlh4aWlpYcGlpaWnJoaGlpyaGhpaUlh4aWlpYcGlpaWnJoaElpycGhpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwa">
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAdgAAAHYBTnsmCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFESURBVFiFtZe9SwJRFMWfL1sIFxsaGhpacGhpaGhoaGhpaWlpaWlpaWhoaGhpaGlpaGhpaWlpaGhpaGlpaWlpaWlpaWlpaGhpaGhpaGlpaWnJoaGhJYeGFhwaGlpycGhpycGhpaUlB4eWlpYcHFpaWnJwaGlpycGhpaUlB4eWlpYcHFpaWnJwaGlpycGhpaUlB4eWlpYcHFpaWnJwaGlpycGhpaUlh4aWlpYcGlpaWnJoaGlpyaGhpaUlh4aWlpYcGlpaWnJoaGlpyaGhpaUlh4aWlpYcGlpaWnJoaGlpyaGhpaUlh4aWlpYcGlpaWnJoaGlpyaGhpaUlh4aWlpYcGlpaWnJoaElpycGhpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwaWlpacmhoaWnJoaGlpSWHhpaWlhwa">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1e3a2e;
+            background: #ffffff;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Grid background pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(30, 58, 46, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(30, 58, 46, 0.1) 1px, transparent 1px);
+            background-size: 25px 25px;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            padding: 80px 20px 60px;
+            text-align: left;
+        }
+
+        .intro-text {
+            font-size: 0.9em;
+            color: #1e3a2e;
+            margin-bottom: 10px;
+            opacity: 0.7;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -3px;
+            color: #1e3a2e;
+            font-family: Arial Black, sans-serif;
+            text-transform: lowercase;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            color: #1e3a2e;
+            margin-bottom: 30px;
+            max-width: 600px;
+            line-height: 1.5;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .links {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: #1e3a2e;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #1e3a2e;
+            transition: width 0.3s;
+        }
+
+        .links a:hover::after {
+            width: 100%;
+        }
+
+        .content-grid {
+            margin-top: 80px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            color: #1e3a2e;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-transform: lowercase;
+            font-family: Arial Black, sans-serif;
+        }
+
+        .project {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(30, 58, 46, 0.2);
+            transition: all 0.3s;
+        }
+
+        .project:hover {
+            border-color: #1e3a2e;
+            transform: translateX(10px);
+        }
+
+        .project.faded {
+            opacity: 0.6;
+            border-style: dashed;
+        }
+
+        .project.faded:hover {
+            opacity: 0.8;
+        }
+
+        .project h3 {
+            color: #1e3a2e;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+            font-weight: 700;
+        }
+
+        .project-type {
+            display: inline-block;
+            color: #1e3a2e;
+            padding: 4px 0;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.6;
+            font-weight: 500;
+        }
+
+        .project p {
+            color: #1e3a2e;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .coming-soon {
+            font-style: italic;
+            opacity: 0.6;
+            margin-top: 10px;
+            text-transform: lowercase;
+        }
+
+        .tech-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tech-pill {
+            background: transparent;
+            color: #1e3a2e;
+            padding: 4px 12px;
+            border: 1px solid #1e3a2e;
+            font-size: 0.85em;
+            transition: all 0.3s;
+        }
+
+        .tech-pill:hover {
+            background: #1e3a2e;
+            color: white;
+        }
+
+        .project-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .project-links a {
+            color: #1e3a2e;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 1px;
+        }
+
+        .project-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #1e3a2e;
+            transition: width 0.3s;
+        }
+
+        .project-links a:hover::after {
+            width: 100%;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .skill-category h4 {
+            color: #1e3a2e;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: transparent;
+            padding: 8px 16px;
+            border: 1px solid #1e3a2e;
+            font-size: 0.9em;
+            color: #1e3a2e;
+            transition: all 0.3s;
+        }
+
+        .skill:hover {
+            background: #1e3a2e;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .about-content {
+            font-size: 1.1em;
+            color: #1e3a2e;
+            line-height: 1.8;
+            opacity: 0.85;
+        }
+
+        .about-content strong {
+            color: #1e3a2e;
+            font-weight: 700;
+            opacity: 1;
+        }
+
+        .art-note {
+            margin-top: 30px;
+            padding: 20px;
+            border-left: 3px solid #1e3a2e;
+            font-size: 0.95em;
+            color: #1e3a2e;
+            opacity: 0.8;
+            background: rgba(30, 58, 46, 0.03);
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: #1e3a2e;
+            font-size: 0.9em;
+            opacity: 0.6;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+
+            .project {
+                padding: 20px;
+            }
+
+            .links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* Product Strategy Section */
+        .strategy-section {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 2px solid rgba(30, 58, 46, 0.2);
+        }
+
+        .concept-badge {
+            display: inline-block;
+            background: rgba(30, 58, 46, 0.1);
+            color: #1e3a2e;
+            padding: 4px 12px;
+            border: 1px solid #1e3a2e;
+            font-size: 0.75em;
+            margin-left: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .project-highlights {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(30, 58, 46, 0.03);
+            border-left: 3px solid #1e3a2e;
+        }
+
+        .project-highlights ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .project-highlights li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        .project-highlights li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #1e3a2e;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p class="intro-text">hi! i'm</p>
+            <h1>caroline kasman</h1>
+            <p class="tagline">
+                Product and program strategist who builds things. Currently exploring the intersection of 
+                systems thinking and human-centered design in impact-driven spaces.
+            </p>
+            <div class="links">
+                <a href="https://linkedin.com/in/carolinekasman" target="_blank">LinkedIn</a>
+                <a href="https://github.com/ckas-fh" target="_blank">GitHub</a>
+                <a href="mailto:hello@carolinekasman.com">Email</a>
+                <a href="#" onclick="showResumeMessage(event)">Resume</a>
+            </div>
+        </header>
+
+        <div class="content-grid">
+            <!-- Product Demos Section -->
+            <section class="section">
+                <h2>product demos</h2>
+                
+                <div class="project">
+                    <span class="project-type">AI + Product Development</span>
+                    <h3>User Feedback Analyzer</h3>
+                    <p>Built an AI-powered tool that transforms customer feedback into actionable insights. 
+                    Learned full-stack development through "vibe coding" - using AI to help build a real product 
+                    that solves business problems.</p>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">Claude AI</span>
+                        <span class="tech-pill">Cursor</span>
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">Product Design</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://user-feedback-analyzer-production.up.railway.app" target="_blank">View Demo</a>
+                        <a href="https://github.com/ckas-fh/user-feedback-analyzer" target="_blank">View Code</a>
+                    </div>
+                </div>
+                <div class="project">
+                    <span class="project-type">Mobility Assistance Accessory</span>
+                    <h3>Movement Monitor</h3>
+                    <p>Conceptual prototype exploring adaptive outdoor mobility for individuals with Parkinson's disease and other mobility challenges. 
+                    Visualizes how movement patterns, environmental terrain, and assistive design intersect to inform 
+                    accessibility solutions.</p>
+                    <div class="tech-pills">
+                        <span class="tech-pill">React</span>
+                        <span class="tech-pill">Mapbox</span>
+                        <span class="tech-pill">Accessibility</span>
+                        <span class="tech-pill">Healthcare UX</span>
+                        <span class="tech-pill">Data Visualization</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://movementmonitor.vercel.app" target="_blank">View Demo</a>
+                        <a href="https://github.com/ckas-fh/movement-monitor" target="_blank">View Code</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <span class="project-type">Scientific Challenge Platform</span>
+                    <h3>CellBench</h3>
+                    <p>Competition platform prototype inspired by Arc Institute's Virtual Cell Challenge. Simulates complete 
+                    competition workflows including dataset access, leaderboard scoring, FAIR data tracking, and community 
+                    engagement features for scientific competitions.</p>
+                    <div class="tech-pills">
+                        <span class="tech-pill">Next.js</span>
+                        <span class="tech-pill">Competition Platform</span>
+                        <span class="tech-pill">FAIR Data</span>
+                        <span class="tech-pill">Scientific Workflows</span>
+                        <span class="tech-pill">Community Features</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://cellbench-three.vercel.app" target="_blank">View Demo</a>
+                        <a href="https://github.com/ckas-fh/cellbench" target="_blank">View Code</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <span class="project-type">AI Safety & Strategy</span>
+                    <h3>AI Safety Strategic Dashboard</h3>
+                    <p>Executive decision-making tool for AI safety research prioritization and resource allocation. 
+                    Interactive dashboard that helps organizations navigate complex tradeoffs in AI safety investments, 
+                    combining strategic frameworks with data visualization for evidence-based decision making.</p>
+                    <div class="tech-pills">
+                        <span class="tech-pill">React</span>
+                        <span class="tech-pill">Strategic Planning</span>
+                        <span class="tech-pill">Data Visualization</span>
+                        <span class="tech-pill">AI Safety</span>
+                        <span class="tech-pill">Risk Assessment</span>
+                        <span class="tech-pill">Resource Allocation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://ai-safety-strategic-dashboard.vercel.app" target="_blank">View Demo</a>
+                        <a href="https://github.com/ckas-fh/ai-safety-strategic-dashboard" target="_blank">View Code</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <span class="project-type">Healthcare Product Management</span>
+                    <h3>EMR Integration Demo</h3>
+                    <p>Interactive product management demonstration showcasing healthcare data integration workflows. 
+                    Built to illustrate user research, technical requirements gathering, and stakeholder alignment 
+                    in healthcare technology product development.</p>
+                    <div class="tech-pills">
+                        <span class="tech-pill">React</span>
+                        <span class="tech-pill">Healthcare UX</span>
+                        <span class="tech-pill">Product Strategy</span>
+                        <span class="tech-pill">User Research</span>
+                        <span class="tech-pill">Technical Requirements</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://generic-emr-demo.vercel.app" target="_blank">View Demo</a>
+                    </div>
+                </div>
+
+               
+<!-- product Strategy & Concept Work Section -->
+<section class="section strategy-section">
+    <h2>product strategy & concept work</h2>
+    
+    <div class="project">
+        <span class="project-type">Climate Tech</span>
+        <h3>Induction Cooking Accessory Concept</h3>
+        <span></span><p>Hardware concept addressing culinary barrier to home stove electrification: a thermal accessory that enables high-heat wok cooking on induction ranges.
+            Conducted market analysis of adoption barriers and existing solutions. 
+        <div class="project-highlights">
+            <ul>
+                <li>Market analysis of existing solutions and adoption barriers</li>
+                <li>Developed user-centered design concept and manufacturing/pricing strategy</li>
+                <li>Go-to-market strategy with partnerships approach, risk mitigation, and success metrics</li>
+            </ul>
+        </div>
+        <div class="tech-pills">
+            <span class="tech-pill">Market Research</span>
+            <span class="tech-pill">Persona Development</span>
+            <span class="tech-pill">Hardware Product</span>
+            <span class="tech-pill">Electrification</span>
+            <span class="tech-pill">Go-to-Market Strategy</span>
+        </div>
+        <div class="project-links">
+            <a href="https://drive.google.com/file/d/1SOguO3aL9DaErugfZ_s29BaYltW3wU93/view?usp=sharing" target="_blank">View Concept Deck</a>
+        </div>
+    </div>
+
+    <div class="project">
+        <span class="project-type">Biotech Infrastructure</span>
+        <h3>Genomic Data Platform: TRE Strategy</h3>
+        <p>Product strategy exploration for a Trusted Research Environment (TRE) MVP. Developed comprehensive 
+        product requirements, vendor evaluation framework, and 12-month roadmap for secure genomic 
+        research infrastructure serving academic and industry researchers.</p>
+        <div class="project-highlights">
+            <ul>
+                <li>User research and persona development across archetypes</li>
+                <li>Build vs. buy analysis for potential vendors</li>
+                <li>Compliance requirements mapping (HIPAA, IRB, FAIR data principles)</li>
+                <li>MVP scoping and success metrics</li>
+            </ul>
+        </div>
+        <div class="tech-pills">
+            <span class="tech-pill">Product Strategy</span>
+            <span class="tech-pill">User Research</span>
+            <span class="tech-pill">Vendor Evaluation</span>
+            <span class="tech-pill">Compliance</span>
+            <span class="tech-pill">Genomics</span>
+        </div>
+        <div class="project-links">
+            <a href="https://drive.google.com/file/d/1wwYlp-UjOW86a4z1hTGzwYwk00Utqhk0/view?usp=share_link" target="_blank">View Strategy Deck</a>
+        </div>
+    </div>
+</section>
+                
+            </section>
+            <!-- Skills Section -->
+            <section class="section">
+                <h2>skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Strategy & Management</h4>
+                        <div class="skill-list">
+                            <span class="skill">Program Strategy</span>
+                            <span class="skill">Product Roadmapping</span>
+                            <span class="skill">Project Management</span>
+                            <span class="skill">GTM Strategy</span>
+                            <span class="skill">Agile/Scrum</span>
+                            <span class="skill">Risk Mitigation</span>
+                            <span class="skill">Stakeholder Alignment</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Technical & Data</h4>
+                        <div class="skill-list">
+                            <span class="skill">Python</span>
+                            <span class="skill">SQL</span>
+                            <span class="skill">R</span>
+                            <span class="skill">Snowflake</span>
+                            <span class="skill">dbt</span>
+                            <span class="skill">Databricks</span>
+                            <span class="skill">Azure ML</span>
+                            <span class="skill">AWS</span>
+                            <span class="skill">Tableau</span>
+                            <span class="skill">Power BI</span>
+                            <span class="skill">Hex</span>
+                            <span class="skill">Evidence</span>
+                            <span class="skill">Jupyter</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Domain & Innovation</h4>
+                        <div class="skill-list">
+                            <span class="skill">Precision Medicine</span>
+                            <span class="skill">Genomics/NGS</span>
+                            <span class="skill">Neurologic Disorders</span>
+                            <span class="skill">Climate Tech</span>
+                            <span class="skill">Population Health</span>
+                            <span class="skill">EHR Integration</span>
+                            <span class="skill">Regulatory Alignment</span>
+                            <span class="skill">Scientific Communication</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>AI & Product Development</h4>
+                        <div class="skill-list">
+                            <span class="skill">AI-Powered Development</span>
+                            <span class="skill">Claude/ChatGPT/Gemini/Manus</span>
+                            <span class="skill">Cursor AI</span>
+                            <span class="skill">Claude Code</span>
+                            <span class="skill">Zapier</span>
+                            <span class="skill">Product Design</span>
+                            <span class="skill">Rapid Prototyping</span>
+                            <span class="skill">Cross-Functional Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Community Impact Section -->
+            <section class="section">
+                <h2>community impact</h2>
+                
+                <div class="project">
+                    <span class="project-type">Healthcare Access</span>
+                    <h3>Medical Assistant Volunteer - Clinic by the Bay</h3>
+                    <p>Supporting patient intake, EHR navigation, and care delivery in free clinic serving underserved San Francisco communities. Working directly with patients to improve healthcare access and outcomes.</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">Mar 2024 – Present</p>
+                </div>
+
+                <div class="project">
+                    <span class="project-type">Emergency Medicine</span>
+                    <h3>Emergency Medical Volunteer - UCSF Orthosurgery</h3>
+                    <p>Providing emergency medical support at major San Francisco races including Bay to Breakers and SF Marathon. Certified NREMT with wilderness medicine training, combining clinical skills with field response.</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">May 2024 – Present</p>
+                </div>
+
+                <div class="project">
+                    <span class="project-type">Nonprofit Leadership</span>
+                    <h3>Board Director - The Center for Chronic Illness</h3>
+                    <p>Doubled nonprofit's support group reach for chronic illness patients across under-resourced communities. Led strategic initiatives to expand access and improve program effectiveness.</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">Jun 2019 – Apr 2024 | Seattle, WA</p>
+                </div>
+
+                <div class="project">
+                    <span class="project-type">Climate Innovation</span>
+                    <h3>Community Volunteer - 9zero Climate Tech Hub</h3>
+                    <p>Organizing and managing climate tech networking events, fostering collaboration between founders, investors, and engineers in San Francisco's climate innovation ecosystem.</p>
+                    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">2024 – Present</p>
+                </div>
+
+            <!-- About Section -->
+            <section class="section">
+                <h2>about</h2>
+                <div class="about-content">
+                    <p>
+                        I'm a program and product strategist with a scientist's curiosity and a builder's mindset. 
+                        My background spans <strong>biomedical research</strong>, <strong>population health innovation</strong>, 
+                        <strong>climate tech</strong>, and <strong>emerging technologies</strong> - but what drives me is making complex systems work better for people.
+                    </p>
+                    <p style="margin-top: 20px;">
+                        Currently exploring how AI can amplify human problem-solving, whether that's in precision medicine, 
+                        climate resilience, or anywhere else innovation is needed. Learning to code and product design has opened up 
+                        new ways to prototype solutions and bridge the gap between strategy and implementation.
+                    </p>
+                    <p style="margin-top: 20px;">
+                        <strong>What I bring:</strong> Systems thinking shaped by early work in macroeconomics research, scientific rigor, 
+                        and the ability to translate between technical teams and stakeholders. Plus, a growing toolkit for building things myself.
+                    </p>
+                    
+                    <div class="art-note">
+                        <strong>Plot twist:</strong> I also make art. Working on a separate creative portfolio, 
+                        but happy to share if you're curious about the right-brain side of things.
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>© 2025 Caroline Kasman. Built with AI assistance.<br>
+            <small>Grid design aesthetic inspired by <a href="https://www.behance.net/gallery/210944049/Portfolio-2025-Graphic-Designer" target="_blank" style="color: #1e3a2e; text-decoration: none; opacity: 0.7;">Huynh Trung Thuan</a></small></p>
+        </footer>
+    </div>
+
+    <script>
+        function showResumeMessage(event) {
+            event.preventDefault();
+            alert("Multiple versions available - please email for role-specific resume\n\nI tailor my resume for climate, health, tech, and other sectors. Email me at hello@carolinekasman.com to discuss your role and I'll send the most relevant version!");
+        }
+    </script>
+</body>
+</html>
